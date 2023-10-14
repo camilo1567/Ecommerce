@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn-black{
+    @apply inline-block px-6 py-2 bg-black text-white rounded-md;
+}
+
+.btn-blue{
+    @apply inline-block px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md;
+}
