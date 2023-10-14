@@ -1,5 +1,5 @@
 <footer class="bg-black py-4">
-    <div class="px-20 py-20 text-white text-center md:text-start md:flex justify-between">
+    <div class="p-14 text-white text-center md:text-start md:flex justify-between">
 
         <section class="mb-4">
             <h3 class="">CONTACTO</h3>
@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="container mx-auto px-20">
+    <div class="container mx-auto px-14">
         <div class="text-center md:text-left md:flex justify-between items-center">
             <div class="flex justify-between gap-4 items-center">
                 <a href="#" class="text-gray-400 hover:text-gray-500 mb-4">Politicas de privacidad</a>

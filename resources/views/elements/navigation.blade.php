@@ -19,6 +19,12 @@
                         </x-nav-link>
                     </div>
 
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.index')">
+                            {{ __('Categorias') }}
+                        </x-nav-link>
+                    </div>
+
                 @else
 
                     <!-- Logo -->
@@ -87,10 +93,11 @@
 
             @else
 
-                <a href="{{ route('login') }}" class="btn-blue">Iniciar Sesion</a>
-
-                {{--
-                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a> --}}
+                @if (request()->routeIs('login'))
+                    <a href="{{ route('register') }}" class="btn-blue">Registrarse</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn-blue">Iniciar Sesion</a>
+                @endif
 
             @endauth
 
