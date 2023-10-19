@@ -16,22 +16,21 @@
 
                     <div class="container mx-auto py-6">
                         <div class="w-full">
-                          <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                            <div class="p-6 bg-white border-b border-gray-200">
-                              <table class="min-w-full">
+                            <div class="bg-white overflow-hidden overflow-x-auto shadow-sm sm:rounded-lg">
+                                <table class=" min-w-full">
                                 <thead>
-                                  <tr>
+                                    <tr>
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
                                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
-                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
-                                  </tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($categorias as $categoria)
                                         <tr class="border-t border-gray-200">
                                             <td class="px-6 py-4 text-sm text-gray-500">{{ $categoria->nombre }}</td>
                                             <td class="px-6 py-4 text-sm text-gray-500">{{ $categoria->descripcion }}</td>
-                                            <td class="px-6 py-4 text-sm">
+                                            <td class="px-6 py-4 text-sm flex justify-end gap-2">
                                                 <a href="{{ route('categorias.edit',$categoria) }}" class="btn-blue">Editar</a>
 
                                                 <form action="{{ route('categorias.destroy',$categoria) }}" class="btn-red" method="post">
@@ -40,15 +39,13 @@
                                                     <button  onclick="return confirm('¿Seguro que quiere eliminar esta categoría?')" type="submit">Eliminar</button>
                                                 </form>
 
-                                                {{-- <a href="{{ route('categorias.destroy',$categoria) }}" onclick="return confirm('¿Seguro que quiere eliminar esta categoría?')" class="btn-red">Eliminar</a> --}}
                                             </td>
                                         </tr>
                                     @endforeach
 
                                 </tbody>
-                              </table>
+                                </table>
                             </div>
-                          </div>
                         </div>
                       </div>
 

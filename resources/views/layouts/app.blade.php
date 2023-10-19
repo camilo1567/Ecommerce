@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -27,12 +29,26 @@
                 </header>
             @endif
 
+            @if (isset($headerCategorias))
+                <header class="bg-white shadow-md border-b ">
+                    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                        {{ $headerCategorias }}
+                    </div>
+                </header>
+            @endif
+
+
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
 
             @if (!Auth::user())
+                @include('elements.footer')
+            @endif
+
+            @if (Auth::user() && request()->routeIs('inicio'))
                 @include('elements.footer')
             @endif
         </div>

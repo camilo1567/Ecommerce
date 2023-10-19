@@ -1,4 +1,4 @@
-<footer class="bg-black py-4">
+<footer id="footer" class="bg-black py-4">
     <div class="p-14 text-white text-center md:text-start md:flex justify-between">
 
         <section class="mb-4">

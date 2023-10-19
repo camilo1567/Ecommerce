@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoriaController;
+use App\Http\Controllers\Admin\ProductoController;
+use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,12 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('inicio');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('inicio');
+
+Route::get('/', [InicioController::class, 'index'])->name('inicio');
+Route::get('/inicio/productos/{categoria}', [InicioController::class, 'productosPorCategoria'])->name('inicio.productosPorCategoria');
+Route::get('/inicio/producto/{producto}', [InicioController::class, 'producto'])->name('inicio.producto');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('inicio');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,8 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('/categorias',CategoriaController::class);
-
-    //Route::get('/categorias', [CategoriaController::class, 'index'])->name('categorias.index');
+    Route::resource('/productos',ProductoController::class);
 
 });
 
