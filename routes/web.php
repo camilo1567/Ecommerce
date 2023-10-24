@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AutkController;
 use App\Http\Controllers\Admin\CategoriaController;
 use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\InicioController;
@@ -36,6 +37,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('/categorias',CategoriaController::class);
     Route::resource('/productos',ProductoController::class);
+    Route::resource('/autk',AutkController::class);
 
 });
 

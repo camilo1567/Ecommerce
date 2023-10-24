@@ -23,7 +23,7 @@
                 <h1 class="text-2xl mt-2 md:text-6xl uppercase leading-none text-black font-oswald mb-6">Autk</h1>
                 <p class="text-md md:text-xl uppercase mb-5">estrena las mejores prendas</p>
                 <div class="flex justify-center">
-                    <a href="#footer" class="btn-black uppercase">informacion</a>
+                    <a href="#footer" class="btn-black uppercase">Contacto</a>
                 </div>
             </div>
         </div>
