@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Autk;
+use App\Models\Compra;
 use Illuminate\Http\Request;
 
 class AutkController extends Controller
@@ -13,7 +14,9 @@ class AutkController extends Controller
      */
     public function index()
     {
-        //
+        $compras = Compra::all();
+
+        return view('dashboard',compact('compras'));
     }
 
     /**

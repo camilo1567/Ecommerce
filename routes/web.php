@@ -35,9 +35,11 @@ Route::get('/cart-compra', [CarritoController::class, 'compra'])->name('cart.com
 
 Route::post('/cart-compra-realizada', [CarritoController::class, 'compraRealizada'])->name('cart.compraRealizada');
 
-Route::get('/dashboard', function () {
-    return redirect()->route('inicio');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return redirect()->route('inicio');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', [AutkController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
