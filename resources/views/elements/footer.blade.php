@@ -15,10 +15,10 @@
             </ul>
         </section>
 
-        {{-- <section class="mb-4">
-            <h3>QUIENES SOMOS</h3>
-            <p>Sobre Nosotros</p>
-        </section> --}}
+        <section class="mb-6">
+            <h3 class="mb-2">AUTK</h3>
+            <a href="{{ route('login') }}">Iniciar Sesion</a>
+        </section>
 
         <section class="mb-6">
             <h3 class="mb-4">REDES SOCIALES</h3>

@@ -40,9 +40,17 @@
                             <h3 class="font-bold text-gray-900">Descripcion</h3>
                             <p class="mb-6">{{ $producto->descripcion }}</p>
 
-                            <div class="flex justify-center mt-6">
-                                <button class="btn-black">Agregar a la bolsa</button>
-                            </div>
+                            {{ Aire::open()->route('cart.add') }}
+
+                                {{ Aire::hidden('id')->value($producto->id) }}
+
+                                {{ Aire::number('cantidad')->min(1)->max($producto->inventario)->label('Cantidad') }}
+
+                                <div class="flex justify-center mt-6">
+                                    {{ Aire::submit('Agregar al carrito')->class('btn-black') }}
+                                </div>
+
+                            {{ Aire::close() }}
 
                         </div>
 
