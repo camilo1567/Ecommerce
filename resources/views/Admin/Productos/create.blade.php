@@ -5,10 +5,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
+                    <!--formulario enctype para archivos o imagenes-->
                     {{ Aire::open()->route('productos.store')->enctype('multipart/form-data') }}
 
                     <div class="grid grid-cols-2 gap-2">
-
 
                         {{ Aire::input('nombre','Nombre') }}
 
@@ -16,7 +16,7 @@
 
                         {{ Aire::number('precio','Precio') }}
 
-                        {{ Aire::select([$categorias->pluck('nombre','id')],'categoria_id','Categorias') }}
+                        {{ Aire::select(['' => 'Seleccione una cateogria']+$categorias->pluck('nombre','id')->toArray(),'categoria_id','Categorias') }}
 
                         {{ Aire::file('img','Imagen') }}
 

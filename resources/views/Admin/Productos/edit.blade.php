@@ -19,7 +19,7 @@
 
                             {{ Aire::number('inventario','Inventario')->value($producto->inventario) }}
 
-                            {{ Aire::select([$categorias->pluck('nombre','id')],'categoria_id','Categorias')->value($producto->categoria_id) }}
+                            {{ Aire::select($categorias->pluck('nombre','id'),'categoria_id','Categorias')->value($producto->categoria_id) }}
 
                             {{ Aire::file('img','Imagen') }}
 

@@ -13,23 +13,6 @@
         </div>
     </x-slot>
 
-
-    {{-- <section class="p-12">
-        <div class="md:flex md:justify-between items-center md:flex-1 px-20">
-            <div class="w-full md:w-1/2 flex justify-center">
-                <img src="{{ asset('img/1.png') }}"  alt="imagen">
-            </div>
-
-            <div class="w-full md:w-1/2 text-center">
-                <h1 class="text-2xl mt-2 md:text-6xl uppercase leading-none text-black font-oswald mb-6">Autk</h1>
-                <p class="text-md md:text-xl uppercase mb-5">estrena las mejores prendas</p>
-                <div class="flex justify-center">
-                    <a href="#" class="btn-black uppercase">informacion</a>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
     <div class="bg-white py-2">
 
         <h1 class="text-center uppercase text-2xl font-bold mt-6 ">{{ $categoriaPrincipal->nombre }}</h1>

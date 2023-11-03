@@ -17,7 +17,12 @@
 
         <section class="mb-6">
             <h3 class="mb-2">AUTK</h3>
-            <a href="{{ route('login') }}">Iniciar Sesion</a>
+            <div>
+                <a href="{{ route('login') }}">Iniciar Sesion</a>
+            </div>
+            <div>
+                <a href="{{ route('register') }}">Registrarse</a>
+            </div>
         </section>
 
         <section class="mb-6">
